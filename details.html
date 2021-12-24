@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Click to add</title>
+</head>
+<body>
+<h2>Personal details</h2>
+<a href="/add">Click to add</a>
+<br>
+<table>
+    <thead>
+			<th>user_id</th>
+            <th>name</th>
+			<th>company</th>
+			<th>phone no</th>
+			<th>options</th>
+		</thead>
+		{% for data in s %}
+		<tbody>
+			<td>{{data.user_id}}</td>
+			<td>{{data.user_name}}</td>
+			<td>{{data.company_name}}</td>
+			<td>{{data.phone_no}}</td>
+			<td><a href="/delete/{{data.user_id}}" type="button">Delete</a></td>
+        </tbody>
+		{% endfor%}
+	</table>
+
+</body>
+</html>
